@@ -1,0 +1,47 @@
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-12 my-4">
+      <section class="card content">
+        <div class="card-body">
+          <header class="card-title">
+            <h2>Lämna dina synpunkter här!</h2>
+          </header>
+          <form action="#">
+            <div class="form-group">
+              <label for="rubrik">Rubrik</label>
+              <input id="rubrik" class="form-control" type="text" placeholder="Rubrik" required>
+            </div>
+
+            <div class="form-group">
+              <label for="beskrivning">Beskrivning</label>
+              <textarea id="beskrivning" class="form-control" rows="2" required></textarea>
+              <small>Max 100 tecken.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="ärende">Ärende</label>
+              <select id="ärende" class="form-control">
+                <option selected>Strand</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Vill du få svar på din synpunkt?</label>
+              <div class="form_toggle">
+                <label for="svar_ja">Ja</label>
+                <input value="yes" name="svar" id="svar_ja" type="radio">
+                <label for="svar_nej">Nej</label>
+                <input value="no" name="svar" id="svar_nej" type="radio" checked>
+                <div class="hide_me form-group">
+                  <label for="email">Email</label>
+                  <input id="email" class="form-control" type="email" placeholder="example@email.com">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Skicka..</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-md-5 order-md-2 my-4 offset-md-1 ">
+      <aside class="card border content">
+        <div class="card-body">
+          <header class="card-title">
+            <h2>Vädret på Nicksta</h2>
+          </header>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Klocka</th>
+                  <th>Väder</th>
+                  <th>Värme</th>
+                  <th>Vind</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let weatherStamp of weatherData">
+                <td>{{ weatherStamp.clock }}</td>
+                <td>{{ weatherStamp.description }}</td>
+                <td>{{ weatherStamp.temperature }}</td>
+                <td>{{ weatherStamp.wind }}</td>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+    <div class="col-md-6 order-md-1 my-4">
+
+      <section class="card border content">
+        <div class="card-body">
+          <header class="card-title">
+            <h2>Åker tågen?</h2>
+          </header>
+          <form action="">
+            <div class="form-group">
+              <label for="leaving_from">Jag åker från..</label>
+              <input id="leaving_from" class="form-control" type="text" placeholder="City..">
+            </div>
+            <button type="submit" class="btn btn-primary train_search_btn fetch-data">Sök</button>
+          </form>
+          <table class="table table-striped mt-3">
+            <caption class="train_capture">Åker från:</caption>
+            <thead class="thead-dark">
+              <tr>
+                <th>Nr</th>
+                <th>Avgår</th>
+                <th>Ankommer</th>
+              </tr>
+            </thead>
+            <tbody class="train_body">
+              <!-- Javascript -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
